@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "myproject-c3949"
+  },
+  "targets": {
+    "myproject-c3949": {
+      "hosting": {
+        "MyProject": [
+          "myproject-c3949"
+        ]
+      }
+    }
+  }
+}
