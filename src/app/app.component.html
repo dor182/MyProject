@@ -1,12 +1,8 @@
 <main-nav>
-    <button class="action-button" *ngIf="(afAuth.authState | async) === null" (click)="signIn()">Sign-In with Google</button>
-    <button class="action-button" *ngIf="(afAuth.authState | async)" (click)="signOut()">Sign-Out</button>
+
     <div class="content" role="main">
         <div *ngIf="afAuth.authState | async as user">
           Welcome {{user.displayName}} !!!
         </div></div>
 </main-nav>
 
-<h1>ffff</h1>
-<h1>gggg</h1>
-<h1>does this work?</h1>
