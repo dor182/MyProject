@@ -8,6 +8,7 @@
 
 .sidenav .mat-toolbar {
   background: inherit;
+  font-size: large;
 }
 
 .mat-toolbar.mat-primary {
@@ -16,4 +17,16 @@
   z-index: 1;
 }
 
+.action-button{
+  background:whitesmoke;
+  border: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 3px;
+  height: 50px;
+  border-radius: 10%;
+  font-size: large;
 
+
+}
