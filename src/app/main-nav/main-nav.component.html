@@ -1,41 +1,11 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-toolbar color="primary">
+<span>My project</span>
+<div class="spacer"></div>
+<a mat-button routerLink="/Home" routerLinkActive="active">Home</a>
 
+<a mat-button routerLink="/About" routerLinkActive="active">About</a>
 
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-
-    <mat-nav-list>
-      <a mat-list-item routerLink="/Home" routerLinkActive="active">Home</a>
-
-      <a mat-list-item routerLink="/About" routerLinkActive="active">About</a>
-
-
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>My Project
-      <button class="action-button" *ngIf="(afAuth.authState | async) === null" (click)="signIn()" style="position: ">Sign-In with Google</button>
-      <button class="action-button" *ngIf="(afAuth.authState | async)" (click)="signOut()" >Sign-Out</button>
-      </span>
-
-    </mat-toolbar>
-    <ng-content ></ng-content>
-
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-<router-outlet></router-outlet>
+<a mat-button class="action-button" *ngIf="(afAuth.authState | async) === null" (click)="signIn()" style="position:">Sign-In with Google</a>
+<a mat-button class="action-button" *ngIf="(afAuth.authState | async)" (click)="signOut()" >Sign-Out</a>
+</mat-toolbar>
+<h1>hi</h1>
