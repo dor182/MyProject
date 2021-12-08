@@ -1,17 +1,21 @@
-<main-nav>
-  <div class='box' style="width: 100%; height: 100%;" >
-    <div class='wave -one'></div>
-    <div class='wave -two'></div>
-    <div class='wave -three'></div>
-    <div class='title'><div class="content" role="main">
-      <div *ngIf="afAuth.authState | async as user">
-        Welcome {{user.displayName}} !!!
-      </div></div></div>
-  </div>
+<mat-toolbar>
+  <main-nav>
+    <div class='box' style="width: 100%; height: 100%;" >
+      <div class='wave -one'></div>
+      <div class='wave -two'></div>
+      <div class='wave -three'></div>
+      <div class='title'><div class="content" role="main">
+        <div *ngIf="afAuth.authState | async as user">
+          Welcome {{user.displayName}} !!!
+        </div></div></div>
+    </div>
+  
+  
+  
+  
+  
+  </main-nav>
+</mat-toolbar>
 
 
-
-
-
-</main-nav>
 

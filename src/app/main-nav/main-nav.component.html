@@ -1,11 +1,11 @@
 <mat-toolbar color="primary">
 <span>My project</span>
 <div class="spacer"></div>
+
 <a mat-button routerLink="/Home" routerLinkActive="active">Home</a>
-
 <a mat-button routerLink="/About" routerLinkActive="active">About</a>
-
-<a mat-button class="action-button" *ngIf="(afAuth.authState | async) === null" (click)="signIn()" style="position:">Sign-In with Google</a>
+<a mat-button class="action-button" *ngIf="(afAuth.authState | async) === null" (click)="signIn()" style="position:" >Sign-In with Google</a>
 <a mat-button class="action-button" *ngIf="(afAuth.authState | async)" (click)="signOut()" >Sign-Out</a>
 </mat-toolbar>
-<h1>hi</h1>
+
+<ng-content></ng-content>
