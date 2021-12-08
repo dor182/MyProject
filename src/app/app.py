@@ -1,9 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, request
+from flask_restful import Resource, Api
 
 app = Flask(__name__)
+api = Api(app)
 
-@app.route("/")
-def hello_world():
-    return render_template('index.html')
+class Employees(Resource):
+    def get(self):
+        return {'employees': [{'id':1, 'name':'Balram'},{'id':2, 'name':'Tom'}]} 
 
-app.run()
+api.add_resource(Employees, '/employees') # Route_1
+
+if __name__ == '__main__':
+     app.run(port=5002)
